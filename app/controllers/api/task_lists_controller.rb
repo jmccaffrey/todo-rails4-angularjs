@@ -2,7 +2,7 @@ class Api::TaskListsController < Api::BaseController
   before_action :check_owner, only: [:show, :update, :destroy]
 
   def index
-    render json: current_user.task_lists
+    render json: current_user.task_lists, :callback => params['callback']
   end
 
   def show
