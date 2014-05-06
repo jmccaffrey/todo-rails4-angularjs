@@ -74,6 +74,8 @@ GEM
     pg (0.13.2)
     polyglot (0.3.4)
     rack (1.5.2)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-cors (0.2.9)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -162,6 +164,7 @@ DEPENDENCIES
   jquery-rails (>= 3.0.4)
   jquery-ui-rails
   pg (= 0.13.2)
+  rack-contrib
   rack-cors
   rails (= 4.0.0)
   rspec-rails
