@@ -17,6 +17,8 @@ gem 'jquery-ui-rails'
 gem 'acts_as_list'
 # so javascript API calls will go through
 gem 'rack-cors', :require => 'rack/cors'
+# for jsonp
+gem 'rack-contrib'
 
 group :doc do
   gem 'sdoc', require: false
