@@ -1,0 +1,40 @@
+john_notes.txt
+
+
+http://stormy-castle-9746.herokuapp.com/
+    heroku open
+    go to sign up page
+      error
+    heroku run rake db:setup
+      now it works
+
+    http://stormy-castle-9746.herokuapp.com/task_lists/1
+
+    curl http://stormy-castle-9746.herokuapp.com/api/session -d '' -u john@foo.com:password
+    WEDYMQpNeMvK8tm8aW3z
+
+    curl http://stormy-castle-9746.herokuapp.com/api/task_lists?auth_token=WEDYMQpNeMvK8tm8aW3z
+    $.get("http://stormy-castle-9746.herokuapp.com/api/task_lists?auth_token=WEDYMQpNeMvK8tm8aW3z")
+
+
+want to get the cors part working so I can make an api call from anywhere
+
+pg issue
+  probably should have done
+    gem install pg -- --with-pg-config=/usr/local/bin/pg_config
+    instead of forcing an older pg in Gemfile
+
+added rack contrib for json p
+   $.getJSON("http://stormy-castle-9746.herokuapp.com/api/task_lists?auth_token=WEDYMQpNeMvK8tm8aW3z&callback=foo", function(response){
+          $.each(response.data.tasks, function(i, task){
+               console.log(task.description)
+          });
+      });
+
+  local debugging
+
+    curl http://localhost:3000/api/session -d '' -u john@foo.com:password
+    curl http://localhost:3000/api/task_lists?auth_token=5xrms1pyiYdxzHu4iUgU
+
+couldn't get jsonp rack stuff to work, but could do it as a render
+  https://coderwall.com/p/xew0cw

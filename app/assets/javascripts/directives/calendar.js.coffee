@@ -7,12 +7,14 @@ angular.module('todoApp').directive 'calendar', ->
     model: '='
     onChange: '&'
   link: (scope, element, attrs) ->
+    
     createHiddenInput = ->
       input = angular.element("<input type='text'>")
       element.parent().append(input)
       hideInput(input)
       input
 
+      # Why does the css need to be applied like this?
     hideInput = (input) ->
       input.css("width", "0")
       input.css("height", "0")

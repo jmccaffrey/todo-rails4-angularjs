@@ -11,6 +11,7 @@ angular.module('todoApp').directive 'nonBlank', ->
         # this triggers 'required' error
         input.val("")
       
+      # there isn't a jquery isblank that could be used?
     isBlank = (text) ->
       !!text && text.length > 0 && !text.match(/\S/)
 
