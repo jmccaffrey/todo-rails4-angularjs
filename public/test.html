@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JQuery (cross-domain) JSONP Twitter example</title>
+        <script type="text/javascript"src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $.getJSON("http://localhost:3000/api/task_lists?auth_token=5xrms1pyiYdxzHu4iUgU&callback=?", function(response){
+                 $.each(response, function(i, listItem){
+                    processList(listItem);
+                 });
+                });
+
+                function processList(listObject){
+                     var list_id = listObject.id;
+                     $('#tasks').append('<ul id=' +list_id +'>' + listObject.name +'</ul>');
+                     $.each(listObject.tasks, function(i, task){
+                        $('#'+list_id).append('<li>' + task.description +'</li>');
+                    });
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <ul id="tasks"></ul>
+    </body>
+</html>
