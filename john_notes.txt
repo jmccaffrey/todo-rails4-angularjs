@@ -38,3 +38,8 @@ added rack contrib for json p
 
 couldn't get jsonp rack stuff to work, but could do it as a render
   https://coderwall.com/p/xew0cw
+
+
+travis file checking
+  gem install travis-lint
+  travis-lint .travis.yml
