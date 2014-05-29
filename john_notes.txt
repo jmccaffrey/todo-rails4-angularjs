@@ -70,3 +70,13 @@ getting travis set up
     needed to add coffee script preprocessor block to the config.coffee file
     had to convert some js to coffee
       http://js2coffee.org/
+
+getting it setup on nitrous
+  big pain, had to change ruby version to be more specific 2.0.0-p353
+  problems with sass/sprockets/slim/coffee script compiling
+  angular DashboardController wouldn't load, and would get an end of file
+  I checked the coffee script with this linter
+   http://www.coffeelint.org/
+   but nothing I did would fix it, until I just moved it into the TodolistController, then it worked
+
+

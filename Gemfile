@@ -1,10 +1,14 @@
 source 'https://rubygems.org'
 
-ruby "2.0.0"
+# ruby "2.0.0-p353"
 
 gem 'rails', '4.0.0'
+# gem 'sprockets', '>= 2.12.1'
+# trying to 
+# gem 'sprockets', :git => "https://github.com/sstephenson/sprockets.git"
+# gem 'sprockets-rails', :git => "https://github.com/sstephenson/sprockets-rails.git"
 gem 'pg', "0.13.2"
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '4.0.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '>= 3.0.4'
@@ -26,7 +30,13 @@ group :doc do
 end
 
 group :production do
-  gem 'shelly-dependencies'
+  
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'quiet_assets'
 end
 
 group :test do
