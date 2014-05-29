@@ -1,6 +1,9 @@
 # check the format with travis-lint gem
 #  travis-lint .travis.yml
 
+language: node_js
+node_js:
+  - 0.8
 language: ruby
 rvm:
   - 2.0.0
@@ -11,6 +14,7 @@ script:
 before_script:
   - cp config/travis.database.yml config/database.yml
   - psql -c 'create database todo_test' -U postgres
+  - npm install
 
 
 notifications:
