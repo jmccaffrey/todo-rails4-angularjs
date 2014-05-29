@@ -17,7 +17,7 @@ describe 'TodoListController', ->
 
   it 'should initialize scope.tasks to result of taskListService.find', ->
     @scope.init()
-    expect(@scope.list.tasks).toEqual([{description: 'Task 1'}])
+    expect(@scope.list.tasks).toEqual([{description: 'Task 2'}])
 
   describe 'after initialization', ->
     beforeEach ->
