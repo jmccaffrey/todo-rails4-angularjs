@@ -16,6 +16,6 @@ before_script:
   - psql -c 'create database todo_test' -U postgres
   - npm install
 
-
+#push to kato
 notifications:
   webhooks: https://api.kato.im/rooms/cf8800459ff629021013f1f988cd6642b5289991e24cc62854e1d08e3a7d810/travis
