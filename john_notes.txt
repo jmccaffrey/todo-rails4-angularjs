@@ -40,6 +40,22 @@ couldn't get jsonp rack stuff to work, but could do it as a render
   https://coderwall.com/p/xew0cw
 
 
-travis file checking
-  gem install travis-lint
-  travis-lint .travis.yml
+getting travis set up
+  had to create a database.yml file for it, and copy it before the rake task runs
+  forgot to check in that file
+  
+  error in travis.yml file meant it didn't even run
+
+    travis file checking (indentation matters!)
+      gem install travis-lint
+      travis-lint .travis.yml
+
+  run the rspec tests 
+    bundle exec rspec
+
+  run karma/jasmine tests
+    rake karma
+    ran into some issues
+    needed to add coffee script preprocessor block to the config.coffee file
+    had to convert some js to coffee
+      http://js2coffee.org/

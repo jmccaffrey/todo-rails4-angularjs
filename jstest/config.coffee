@@ -1,8 +1,28 @@
 # Karma configuration
 # Generated on Sun Aug 25 2013 12:31:34 GMT+0200 (CEST)
+# 
+# learn more
+# http://karma-runner.github.io/0.10/config/configuration-file.html
 
 module.exports = (config) ->
   config.set
+
+    # preprocessors
+    preprocessors:
+      "**/*.coffee": ["coffee"]
+
+    coffeePreprocessor:
+    
+      # options passed to the coffee compiler
+      options:
+        bare: true
+        sourceMap: false
+
+    
+      # transforming the filenames
+      transformPath: (path) ->
+        path.replace /\.coffee$/, ".js"
+
 
     # base path, that will be used to resolve all patterns, eg. files, exclude
     basePath: '..'
@@ -49,11 +69,12 @@ module.exports = (config) ->
     # - Safari (only Mac)
     # - PhantomJS
     # - IE (only Windows)
-    browsers: ['Chrome', 'Firefox']
+    # browsers: ['Chrome', 'Firefox']
+    browsers: ['PhantomJS']
 
     # If browser does not capture in given timeout [ms], kill it
     captureTimeout: 60000
 
     # Continuous Integration mode
     # if true, it capture browsers, run tests and exit
-    singleRun: false
+    singleRun: true
