@@ -11,10 +11,12 @@ env:
   - DB=postgresql
 script:
   - "bundle exec rake travis:run"
+  - karma start --single-run --browsers PhantomJS jstest/config.coffee
 before_script:
   - cp config/travis.database.yml config/database.yml
   - psql -c 'create database todo_test' -U postgres
   - npm install
+  - npm install karma
 
 #push to kato
 notifications:
