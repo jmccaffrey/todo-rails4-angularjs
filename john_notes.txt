@@ -50,6 +50,17 @@ getting travis set up
       gem install travis-lint
       travis-lint .travis.yml
 
+  ways to speed up travis
+    https://coderwall.com/p/x8exja
+      create a zip of your bundled gems, and pull them down and install them locally quickly
+        https://github.com/Fingertips/WAD
+      use config.active_record.schema_format = :sql 
+          to create db/structure.sql
+          psql -U postgres -q -d <DB_NAME> -f db/structure.sql
+
+    you can also use the parallel gem
+
+
   run the rspec tests 
     bundle exec rspec
 
