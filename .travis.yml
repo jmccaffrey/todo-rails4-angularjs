@@ -1,3 +1,6 @@
 language: ruby
 rvm:
   - 2.0.0
+
+notifications:
+  webhooks: https://api.kato.im/rooms/cf8800459ff629021013f1f988cd6642b5289991e24cc62854e1d08e3a7d810/travis
