@@ -79,4 +79,30 @@ getting it setup on nitrous
    http://www.coffeelint.org/
    but nothing I did would fix it, until I just moved it into the TodolistController, then it worked
 
+  run tests
+  rspec
+   or
+   bundle exec rake spec RAILS_ENV=test
+  
+  js tests
+    had to install phantomjs
+      parts install phantomjs
+  
+    PHANTOMJS_BIN=/home/action/.parts/bin/phantomjs rake karma
+    maybe that's why it doesn't work on travis is because it doesn't know where to find phantomjs'
+  
+  export PHANTOMJS_BIN=$HOME/local/bin/phantomjs
+  
+  to commit
+   you have to use a passphrase
+  
+  to deploy to heroku
+    not ready yet
+  
+  to deploy to openshift
+   not ready yet
+  
+  
+  
+
 

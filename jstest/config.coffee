@@ -71,6 +71,7 @@ module.exports = (config) ->
     # - IE (only Windows)
     # browsers: ['Chrome', 'Firefox']
     browsers: ['PhantomJS']
+#     browsers = ['/usr/local/bin/custom-browser.sh'];
 
     # If browser does not capture in given timeout [ms], kill it
     captureTimeout: 60000
